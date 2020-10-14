@@ -1,15 +1,15 @@
 
-# Manage Azure Policy Action
+# Manage Azure Policy Inteligo
 
-With Manage Azure Policy Action you can now create or update Azure policies from your GitHub Workflows. Since workflows are totally customizable, you can have a complete control over the sequence in which Azure policies are rolled out. Its now even easier to follow safe deployment practices and catch regressions or bugs well before policies are applied on  critical resources. 
+Inteligo ha definidos sus politcas de nombres y tags bajo los siguientes acuerdos:
 
-New to Azure Policy? Its an Azure service that lets you enforce organizational standards and asses compliance at scale. To know more check out: [Azure Policies - Overview](https://docs.microsoft.com/en-us/azure/governance/policy/overview)
-
-The definition of this Github Action is in [action.yml](https://github.com/Azure/manage-azure-policy/blob/v0/action.yml)
-
+# Referencias:
+* https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging
+* Acuerdos de reunion con Infraestura Panama y Arquitecura Peru
 
 # Pre-requisites:
-* Azure Login Action: Authenticate using [Azure Login](https://github.com/Azure/login)  action. The Manage Azure Policy action assumes that Azure Login is done using an Azure service principal that has [sufficient permissions](https://docs.microsoft.com/en-us/azure/governance/policy/overview#rbac-permissions-in-azure-policy) to write policy on selected scopes. Once login is done, the next set of actions in the workflow can perform tasks such as creating policies or updating them. For more details on permissions, checkout 'Configure credentials for Azure login action' section in this page  or alternatively you can refer the full [documentation](https://github.com/Azure/login) of Azure Login Action.
+* Loguearse al portal de azure con la cuenta de inteligo.
+
 * Azure Checkout Action: All  policies files should be downloaded from the GitHub repository to the GitHub runner. You can use [checkout action](https://github.com/actions/checkout) for doing so. Refer the 'End-to-End Sample Workflows' section in this page for examples.
 * Azure Policy files should be present in the following directory structure. You can also export policies from Azure portal. (Go to _Definitions_ section in Azure Policy and Click on _Export definitions_ button)
 
